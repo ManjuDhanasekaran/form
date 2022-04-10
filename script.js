@@ -1,40 +1,44 @@
-function validate() {    
-            var fname = document.reg_form.fname;    
-            var lname = document.reg_form.lname;    
-            var address = document.reg_form.address;    
-            var gender = document.reg_form.gender;    
-            var email = document.reg_form.email;    
-            var mobile = document.reg_form.mobile;
-            var adhaar = document.reg_form.adhaar;
+const fname = document.getElementById("fname");    
+const lname = document.getElementById("lname");    
+const address = document.getElementById("address");    
+const gender = document.registration;;    
+const email = document.getElementById"(email)";    
+const mobile = document.getElementById("mobile");
+const adhaar = document.getElementById("adhaar");
+
+function formValidation() {
         
-            if (fname.value.length <= 0) {    
-                alert("Name is required");    
-                fname.focus();    
-                return false;    
+ if (fname.value.length < 2 || fname.value.length > 20) {
+    alert("Name length should be more than 2 and less than 21 charaters");
+    fname.focus();
+    return false;
+  }    
+
+ if (lname.value.length < 2 || lname.value.length > 20) {
+    alert("Name length should be more than 2 and less than 21 charaters");
+    lname.focus();
+    return false;
+            } 
+   
+            if (address.value.length 2 || lname.value.length > 100) {
+    alert("address length should be more than 2 and less than 101 charaters");
+    address.focus();
+    return false;
+            }   
+ 
+            if (gender.gender.value === "") {
+           alert("Please select your gender!");
+           return false;
+          }   
+               
+            if (email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+    alert("Please enter a valid email!");
+    email.focus();
+    return false;   
             }    
-            if (lname.value.length <= 0) {    
-                alert("Last Name is required");    
-                lname.focus();    
-                return false;    
-            }    
-            if (address.value.length <= 0) {    
-                alert("Address is required");    
-                address.focus();    
-                return false;    
-            }    
-            if (gender.value.length <= 0) {    
-                alert("Gender is required");    
-                gender.focus();    
-                return false;    
-            }    
-            if (email.value.length <= 0) {    
-                alert("Email Id is required");    
-                email.focus();    
-                return false;    
-            }    
-            if (mobile.value.length <= 0) {    
-                alert("Mobile number is required");    
-                mobile.focus();    
+            if (!mobile.value.match(/^[1-9][0-9]{9}$/)) {
+    alert("Phone number must be 10 characters long number and first digit can't be 0!");
+                 mobile.focus();    
                 return false;    
             }
             if (adhaar.value.length <= 0) {    
@@ -42,19 +46,5 @@ function validate() {
                 adhaar.focus();    
                 return false;
             }
-        
-{
-    var dob = document.reg_form.dob["ProcessInfo"]["txtDOB"].value;
-    var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
-    if (dob == null || dob == "" || !pattern.test(dob)) {
-        errMessage += "Invalid date of birth\n";
-        return false;
-    }
-    else {
-        return true
-    }
-}    
-            }    
-            return false;    
-        }    
-   
+        return true;
+}
