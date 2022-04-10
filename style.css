@@ -16,7 +16,7 @@
   align-items: center;
   flex-direction: column;
   height: 120vh;
-  background-color: skyblue;
+  background-color: powderblue;
 } 
     form{  
         text-align: center;  
@@ -24,7 +24,8 @@
         font-size: 20px;  
         border: 3px solid black;  
         width: 600px;  
-        margin: 20px auto;  
+        margin: 20px auto;
+        background-color: skyblue;
     }  
     td {  
         padding: 10px;  
