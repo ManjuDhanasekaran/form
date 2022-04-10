@@ -1,79 +1,81 @@
 <!DOCTYPE html>    
-<html>    
-<head>    
+<html lang="en">    
+<head> 
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Reg Form</title> 
 <link rel="stylesheet" href="style.css">   
 </head>    
-<body>    
+<body>
+<div class="container">    
     <center><h1>Form Validation</h1></center>    
     <hr>    
-    <form method="" action="" name="reg_form" onsubmit="return validate()">    
+    <form name="registration" class="registartion-form" onsubmit="return formValidation()">   
         <h2>Registration Form</h2>    
         <table>    
             <tr>    
-                <td><label>First Name: </label></td>    
+                <td><label for="fname">First Name: </label></td>    
                 <td>    
-                    <input type="text" name="fname" placeholder="First Name">    
+                    <input type="text" name="fname" id="fname" placeholder="First Name">    
                 </td>    
             </tr>    
             <tr>    
-                <td><label>Last Name: </label></td>    
+                <td><label for="lname">Last Name: </label></td>    
                 <td>    
-                    <input type="text" name="lname" placeholder="Last Name">    
+                    <input type="text" name="lname" id="lname" placeholder="Last Name">    
                 </td>    
             </tr>    
             <tr>    
-                <td><label>Address: </label></td>    
+                <td><label for="address">Address: </label></td>    
                 <td>    
-                    <input type="textarea" size="5" name="address" placeholder="Door no.">  
-                    <input type="textarea" size="50" name="address" placeholder="Location">
-                    <input type="textarea" size="15" name="address" placeholder="District">
-                    <input type="textarea" size="8" name="address" placeholder="Pincode">
+                    <input type="textarea" size="5" name="address" id="address" placeholder="Door no.">  
+                    <input type="textarea" size="50" name="address"  id="address" placeholder="Location">
+                    <input type="textarea" size="15" name="address"  id="address" placeholder="District">
+                    <input type="textarea" size="8" name="address"  id="address" placeholder="Pincode">
                 </td>    
             </tr>    
             <tr>    
-                <td><label>Gender: </label></td>    
-                <td>    
-                    <input type="radio" name="gender" value="male">Male    
-                    <input type="radio" name="gender" value="female">Female    
+                <td><label for="gender">Gender:</label></td>
+          <td>
+            Male: <input type="radio" name="gender" value="male">
+            Female: <input type="radio" name="gender" value="female">
+            Other: <input type="radio" name="gender" value="other">   
                 </td>    
             </tr> 
-            <tr>
                 <tr>
                     <td><label>DOB: </label></td>
                     <td>
                         <input type="date" id="start" name="trip-start"
-           value="0000-00-00">
-        <tr>  
-                <td><label>Email Id: </label></td>    
-                <td>    
-                    <input type="text" name="email" placeholder="example@gmail.com">    
-                </td>    
-            </tr>    
+           value="0000-00-00"></td>
+           </tr>
+        <tr> 
+           <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email"></td>
+        </tr> 
+                  
             <tr>    
-                <td><label>Mobile: </label></td>    
+                <td><label for="mobile">Mobile: </label></td>    
                 <td>    
-                    <input type="number" name="mobile">    
+                    <input type="number" name="mobile" id="mobile">    
                 </td>    
             </tr>
             <tr>    
-                <td><label>Adhaar number: </label></td>    
+                <td><label for="adhaar">Adhaar number: </label></td>    
                 <td>    
-                    <input type="text" name="adhaar number" placeholder="xxxx xxxx xxxx">    
+                    <input type="text" name="adhaar" id="adhaar" placeholder="xxxx xxxx xxxx">    
                 </td>
             </tr>
  
                 
             <tr>    
                 <td>    
-                    <input type="submit" name="submit" value="Submit">    
-                    <input type="reset" name="reset" value="reset">    
+                    <td colspan="2"><input type="submit" class="submit" value="submit" /></td>  
                 </td>    
             </tr> 
             
         </table>    
     </form> 
+</div>
 <script src="./script.js"></script>   
 </body>    
 </html>  
-
