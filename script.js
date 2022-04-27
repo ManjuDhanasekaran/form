@@ -1,8 +1,8 @@
 const fname = document.getElementById("fname");    
 const lname = document.getElementById("lname");    
 const address = document.getElementById("address");    
-const gender = document.registration;;    
-const email = document.getElementById"(email)";    
+const gender = document.registration;   
+const email = document.getElementById("email)";    
 const mobile = document.getElementById("mobile");
 const adhaar = document.getElementById("adhaar");
 
